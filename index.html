@@ -1,1 +1,60 @@
-<h1>Hello world.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smyrna — Home Restoration</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/public/icons/favicon.svg" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <!-- Swap to your real logo if you have one -->
+        <img src="/public/icons/logo.svg" alt="Smyrna" class="logo" />
+        <span class="brand-text">SMYRNA</span>
+      </a>
+
+      <!-- Mobile menu toggle (CSS-only, no JS) -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="burger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav class="nav-links">
+        <a href="/about/">About Us</a>
+        <a href="/contact/">Contact</a>
+        <a href="/gallery/">Gallery</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Careful home restorations, done right.</h1>
+        <p>Family construction and restoration across the region. Floors, windows, façades—minimal mess, maximum craft.</p>
+        <div class="hero-cta">
+          <a class="btn" href="/gallery/">View our work</a>
+          <a class="btn btn-ghost" href="/contact/">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© <span id="y"></span> Smyrna — Home Restoration</small>
+    </div>
+    <script>
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>
