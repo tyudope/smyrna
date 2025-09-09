@@ -1,0 +1,125 @@
+/* ===== Light (beige) palette ===== */
+:root{
+  --bg:#f7f2e7;          /* soft beige */
+  --card:#ffffff;        /* white surfaces */
+  --fg:#1c1c1c;          /* main text (near-black) */
+  --muted:#5f646d;       /* secondary text */
+  --line:#e8e0cf;        /* hairline separators */
+  --accent:#2a6f97;      /* calm blue for CTAs/links */
+  --wrap:1200px;         /* wider container */
+  --rad:16px;
+  --shadow:0 6px 24px rgba(0,0,0,.06);
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+  background:var(--bg); color:var(--fg); line-height:1.6;
+}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+
+/* ===== Header / Navbar (bigger) ===== */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter:saturate(1.2) blur(8px);
+  background:rgba(255,255,255,.7);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:88px;                /* taller navbar */
+}
+
+/* Brand / Logo */
+.brand{display:flex; align-items:center; gap:14px; color:inherit; text-decoration:none}
+.logo{width:36px; height:36px; display:block}
+.logo.lg{width:56px; height:56px}       /* bigger logo */
+.brand-text{font-weight:800; letter-spacing:.06em; font-size:22px}
+
+/* Nav links — bigger typography & spacing */
+.nav-links{display:flex; gap:28px; align-items:center}
+.nav-links.lg a{
+  font-size:18px;             /* bigger nav text */
+  font-weight:600;
+  color:#2a2a2a;
+  text-decoration:none;
+}
+.nav-links.lg a:hover{color:var(--accent)}
+
+/* ===== Mobile burger (CSS-only) ===== */
+.nav-toggle{display:none}
+.burger{display:none; width:34px; height:26px; cursor:pointer}
+.burger span{display:block; height:3px; background:#2a2a2a; margin:6px 0; transition:.2s}
+
+/* ===== Hero ===== */
+.hero{padding:96px 0 72px}
+.hero h1{margin:0 0 12px; font-size:clamp(34px,6vw,56px); line-height:1.08}
+.hero p{margin:0 0 24px; color:var(--muted); max-width:70ch}
+.hero-cta{display:flex; gap:14px; flex-wrap:wrap}
+.btn{
+  display:inline-block; padding:12px 18px; border-radius:14px;
+  background:var(--accent); color:#fff; text-decoration:none; font-weight:800;
+  box-shadow:var(--shadow);
+}
+.btn-ghost{
+  background:transparent; color:#2a2a2a; border:1px solid var(--line);
+}
+
+/* ===== Cards / Grid (future sections) ===== */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; max-width:var(--wrap); margin:24px auto; padding:0 20px}
+.card{background:var(--card); border:1px solid var(--line); border-radius:var(--rad); padding:18px; box-shadow:var(--shadow)}
+img{max-width:100%; height:auto; border-radius:12px}
+
+.footer-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.socials{
+  display:flex;
+  gap:16px;
+}
+
+.socials a{
+  display:inline-flex;
+  width:28px;
+  height:28px;
+  color:inherit;
+}
+
+.icon{
+  width:100%;
+  height:100%;
+  fill:#2a2a2a;              /* dark icon on beige bg */
+  transition:fill .2s ease;
+}
+
+.socials a:hover .icon{
+  fill:var(--accent);        /* hover color */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 860px){
+  /* show burger */
+  .burger{display:block}
+  /* convert links into dropdown panel */
+  .nav-links{
+    position:fixed; right:16px; top:88px; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; padding:12px; display:none; flex-direction:column; gap:12px; z-index:20;
+    box-shadow:var(--shadow)
+  }
+  .nav-toggle:checked ~ .nav-links{display:flex}
+
+  /* burger animation */
+  .nav-toggle:checked + .burger span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+  .nav-toggle:checked + .burger span:nth-child(2){opacity:0}
+  .nav-toggle:checked + .burger span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+}
+
+/* ===== Link color tuning on light bg ===== */
+a{color:#1c1c1c}
+a:hover{color:var(--accent)}
