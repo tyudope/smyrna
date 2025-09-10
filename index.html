@@ -4,65 +4,197 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Smyrna — Home Restoration</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="icon" href="/public/icons/favicon.svg" />
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/">
-        <img src="/public/icons/logo.png" alt="Smyrna" class="logo lg" />
-        <span class="brand-text">SMYRNA</span>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <!-- Replace logo.svg with your real logo -->
+        <img src="/public/icons/logo.png" alt="Smyrna" width="60" height="60" class="rounded">
+        <span class="fw-bold fs-4">SMYRNA</span>
       </a>
-  
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
-      <label for="nav-toggle" class="burger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
-  
-      <nav class="nav-links lg">
-        <a href="/about/">About Us</a>
-        <a href="/contact/">Contact</a>
-        <a href="/gallery/">Gallery</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <h1>Careful home restorations, done right.</h1>
-        <p> construction and restoration across the region. Floors, windows, façades—minimal mess, maximum craft.</p>
-        <div class="hero-cta">
-          <a class="btn" href="/gallery/">View our work</a>
-          <a class="btn btn-ghost" href="/contact/">Get in touch</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="#about">
+              <i class="bi bi-info-circle me-1"></i> About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="#contact">
+              <i class="bi bi-telephone me-1"></i> Contact Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/gallery/">
+              <i class="bi bi-camera me-1"></i> Gallery
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / CAROUSEL (4–5 photos with text on them) -->
+  <section class="py-4">
+    <div class="container px-0">
+      <div id="workCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#workCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        
+        </div>
+
+        <div class="carousel-inner rounded-4 shadow-sm overflow-hidden">
+          <!-- Slide 1 -->
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img src="/public/images/slider/1.jpg" class="d-block w-100 slider-img" alt="Restored oak floors in Warsaw apartment">
+            <div class="carousel-caption text-start">
+              <h2 class="slide-title">Main hall City Space reconstruction</h2>
+              <p class="slide-text">When the renovation meets passion.</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="/public/images/slider/2.jpg" class="d-block w-100 slider-img" alt="Sash window renovation detail">
+            <div class="carousel-caption text-start">
+              <h2 class="slide-title">Bathroom construction</h2>
+              <p class="slide-text">Warmth, cozy bathroom..</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="/public/images/slider/3.jpg" class="d-block w-100 slider-img" alt="Façade refresh on historic townhouse">
+            <div class="carousel-caption text-start">
+              <h2 class="slide-title">Refresh</h2>
+              <p class="slide-text">Gentle cleaning, careful repair.</p>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="carousel-item" data-bs-interval="5000">
+            <img src="/public/images/slider/4.jpg" class="d-block w-100 slider-img" alt="Kitchen carpentry and fit-out">
+            <div class="carousel-caption text-start">
+              <h2 class="slide-title">Whole new room.</h2>
+              <p class="slide-text">Precise joinery, durable finishes.</p>
+            </div>
+          </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#workCarousel" data-bs-slide="prev" aria-label="Previous slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#workCarousel" data-bs-slide="next" aria-label="Next slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+    <!-- ABOUT US -->
+    <section id = "about" class="py-5 bg-white border-top">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <img src="/public/images/about/team.jpg" alt="Smyrna team working on restoration project"
+                 class="img-fluid rounded-4 shadow-sm">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i> About Us</h2>
+            <p class="lead text-secondary">
+              We are a family company based in Warsaw, specializing in careful restorations of apartments,
+              townhouses, and historical elements. From oak floors to sash windows and façades, our focus
+              is on durability, precision, and respect for original craftsmanship.
+            </p>
+            <p>
+              With more than <strong>10 years of experience</strong>, Smyrna has delivered projects across
+              Poland, combining traditional methods with modern finishing standards.
+            </p>
+            <a href="/contact/" class="btn btn-accent btn-lg mt-3">
+              <i class="bi bi-telephone me-1"></i> Contact Us
+            </a>
+          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-wrap">
-      <small>© <span id="y"></span> Smyrna — Home Restoration</small>
-      <div class="socials">
-        <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram">
-          <!-- Instagram SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon">
-            <path d="M224,202a53,53,0,1,0,53,53A53,53,0,0,0,224,202Zm124-41a54,54,0,1,0,54,54A54,54,0,0,0,348,161ZM398.8,80.3A96.09,96.09,0,0,0,352,64H96A96.09,96.09,0,0,0,49.2,80.3,96.09,96.09,0,0,0,32,128v256a96.09,96.09,0,0,0,17.2,47.7A96.09,96.09,0,0,0,96,448H352a96.09,96.09,0,0,0,47.7-17.2A96.09,96.09,0,0,0,416,384V128A96.09,96.09,0,0,0,398.8,80.3ZM224,338a114,114,0,1,1,114-114A114,114,0,0,1,224,338Z"/>
-          </svg>
-        </a>
-        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook">
-          <!-- Facebook SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon">
-            <path d="M279.14 288l14.22-92.66H191.33V127.86c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S265.43 0 225.36 0c-73.22 0-121.05 44.38-121.05 124.72v70.62H22.89V288h81.42v224h100.2V288z"/>
-          </svg>
-        </a>
+    <!-- CONTACT US -->
+<section id="contact" class="py-5 border-top">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12">
+        <h2 class="fw-bold mb-4">
+          <i class="bi bi-telephone me-2"></i> Contact Us
+        </h2>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-md-6 d-flex align-items-center gap-3">
+        <i class="bi bi-telephone fs-2 text-accent"></i>
+        <div>
+          <div class="fw-semibold">Phone</div>
+          <a href="tel:+48123456789" class="text-decoration-none text-dark">+48 123 456 789</a>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-6 d-flex align-items-center gap-3">
+        <i class="bi bi-envelope fs-2 text-accent"></i>
+        <div>
+          <div class="fw-semibold">Email</div>
+          <a href="mailto:info@smyrna-eu.com" class="text-decoration-none text-dark">info@smyrna-eu.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="border-top py-4 bg-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <small class="text-secondary mb-0">© <span id="y"></span> Smyrna — Home Restoration</small>
+
+      <div class="d-flex align-items-center gap-4 footer-socials">
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Facebook:</span>
+          <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <i class="bi bi-facebook fs-4"></i>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Instagram:</span>
+          <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <i class="bi bi-instagram fs-4"></i>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Phone:</span>
+          <a href="tel:+48123456789" aria-label="Phone" class="social-link">
+            <i class="bi bi-telephone fs-4"></i>
+          </a>
+        </div>
       </div>
     </div>
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
