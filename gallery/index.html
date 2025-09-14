@@ -12,8 +12,8 @@
   <!-- Playfair Display for elegant titles/subtitles -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
 
-  <!-- initialization script-->
-  <script src="/js/init-anim.js" defer></script>
+    <!-- initialization script-->
+    <script src="/js/init-anim.js" defer></script>
   <!-- Your site styles (beige/white palette) -->
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="icon" href="/public/icons/logo.png" />
@@ -161,7 +161,9 @@
           <div class="modal-content rounded-4 overflow-hidden">
             <div class="modal-header">
               <h5 class="modal-title fw-bold" id="pmTitle">Project</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn-close-icon" data-bs-dismiss="modal" aria-label="Close">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
 
             <div class="modal-body modal-split">
@@ -188,10 +190,6 @@
                 <h6 class="fw-bold mb-2">Detailed explanation</h6>
                 <p id="pmDetails"></p>
               </div>
-            </div>
-
-            <div class="modal-footer">
-              <button class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
