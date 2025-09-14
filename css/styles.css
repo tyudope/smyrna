@@ -11,6 +11,63 @@ html,body{
   background:var(--bg);
   color:var(--fg);
 }
+/* ===== Intro animation for navbar + header ===== */
+
+/* Respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  body * { transition: none !important; animation: none !important; }
+}
+
+/* Start state (before body.nav-ready is added) */
+body:not(.nav-ready) .navbar {
+  transform: translateY(-10px) scale(0.98);
+  opacity: 0;
+}
+body:not(.nav-ready) .navbar .navbar-brand img {
+  width: 44px; height: 44px;         /* smaller logo on init */
+}
+body:not(.nav-ready) .navbar .nav-link {
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+/* Final state + transitions */
+.navbar {
+  transition: transform 600ms ease, opacity 600ms ease, padding 600ms ease;
+}
+.navbar .navbar-brand img {
+  transition: width 600ms ease, height 600ms ease, transform 600ms ease;
+}
+.navbar .nav-link {
+  transition: opacity 500ms ease 150ms, transform 500ms ease 150ms, color .2s ease;
+}
+body.nav-ready .navbar {
+  transform: none;
+  opacity: 1;
+  /* grow the vertical padding a touch for the "getting bigger" feel */
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+body.nav-ready .navbar .navbar-brand img {
+  width: 60px; height: 60px;         /* your normal logo size */
+}
+body.nav-ready .navbar .nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: fade/slide for the first hero or page header content */
+body:not(.nav-ready) .hero,
+body:not(.nav-ready) header.text-center {   /* your gallery page header */
+  opacity: 0;
+  transform: translateY(8px);
+}
+body.nav-ready .hero,
+body.nav-ready header.text-center {
+  transition: opacity 700ms ease 120ms, transform 700ms ease 120ms;
+  opacity: 1;
+  transform: none;
+}
 
 /* Navbar tweaks (larger) */
 .navbar .navbar-brand span{font-size:1.35rem}
