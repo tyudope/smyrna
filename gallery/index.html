@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smyrna — Gallery</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Playfair Display for elegant titles/subtitles -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Your site styles (beige/white palette) -->
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="icon" href="/public/icons/logo.png" />
+</head>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        <img src="/public/icons/logo.png" alt="Smyrna" width="60" height="60" class="rounded">
+        <span class="fw-bold fs-4">SMYRNA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="nav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/#about">
+              <i class="bi bi-info-circle me-1"></i> About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="/#contact">
+              <i class="bi bi-telephone me-1"></i> Contact Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold active" aria-current="page" href="/gallery/">
+              <i class="bi bi-camera me-1"></i> Our Works
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="py-5 bg-white border-bottom text-center">
+    <div class="container">
+      <h1 class="gallery-title">What We Do</h1>
+      <p class="gallery-subtitle">Restorations with care and precision.</p>
+    </div>
+  </header>
+
+  <!-- PROJECTS -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="card h-100 shadow-sm border-0 rounded-4 gallery-card">
+            <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+              <img src="/public/images/projects/proj1/3.jpg" class="w-100 h-100 object-cover"
+                   alt="Kamionkowska oak floor restoration cover" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 mb-1">Kamionkowska — Oak Floors</h3>
+              <p class="text-secondary mb-3">Sanding, gap repairs, hardwax oil; warm, durable finish.</p>
+              <a href="#"
+                 class="stretched-link open-project"
+                 data-title="Kamionkowska — Oak Floor Restoration"
+                 data-summary="Sanding, gap repair, and hardwax oil to preserve warmth and grain."
+                 data-details="We repaired gaps and secured loose boards, then sanded progressively to a fine grit. Hardwax oil gives a durable, easy-maintenance finish that highlights the oak’s character. Completed in 3 days with dust control."
+                 data-images="/public/images/projects/proj1/1.jpg,/public/images/projects/proj1/2.jpg,/public/images/projects/proj1/3.jpg"
+                 aria-label="Open project: Kamionkowska — Oak Floors"
+                 data-bs-toggle="modal" data-bs-target="#projectModal"></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="card h-100 shadow-sm border-0 rounded-4 gallery-card">
+            <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+              <img src="/public/images/projects/proj2/1.jpg" class="w-100 h-100 object-cover"
+                   alt="Praga sash window renovation cover" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 mb-1">Praga — Sash Windows</h3>
+              <p class="text-secondary mb-3">Reglazing, sealing, hardware; smoother, quieter operation.</p>
+              <a href="#"
+                 class="stretched-link open-project"
+                 data-title="Praga — Sash Window Renovation"
+                 data-summary="Reglazing, sealing, and hardware replacement while keeping original profiles."
+                 data-details="We removed failing paint, consolidated soft wood, replaced glazing putty, added brush seals, and tuned sash balances. Result: smoother operation, reduced drafts, and authentic look."
+                 data-images="/public/images/projects/proj2/1.jpg,/public/images/projects/proj2/2.jpg,/public/images/projects/proj2/3.jpg"
+                 aria-label="Open project: Praga — Sash Window Renovation"
+                 data-bs-toggle="modal" data-bs-target="#projectModal"></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3 (template for more) -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="card h-100 shadow-sm border-0 rounded-4 gallery-card">
+            <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+              <img src="/public/images/projects/proj3/2.jpg" class="w-100 h-100 object-cover"
+                   alt="Mokotów bathroom & tiling cover" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="h5 mb-1">Mokotów — Bathroom & Tiling</h3>
+              <p class="text-secondary mb-3">New waterproofing, tiling, and fixtures with clean, durable lines.</p>
+              <a href="#"
+                 class="stretched-link open-project"
+                 data-title="Mokotów — Bathroom & Tiling"
+                 data-summary="New waterproofing, tiling, and fixtures with clean, durable lines."
+                 data-details="Substrate prep, decoupling where needed, and waterproofing around wet areas. Final grout is stain-resistant for easier maintenance."
+                 data-images="/public/images/projects/proj3/1.jpg,/public/images/projects/proj3/2.jpg,/public/images/projects/proj3/3.jpg"
+                 aria-label="Open project: Mokotów — Bathroom & Tiling"
+                 data-bs-toggle="modal" data-bs-target="#projectModal"></a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4 (template for more) -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <article class="card h-100 shadow-sm border-0 rounded-4 gallery-card">
+              <div class="ratio ratio-4x3 rounded-top-4 overflow-hidden">
+                <img src="/public/images/projects/proj4/3.jpg" class="w-100 h-100 object-cover"
+                     alt="Mokotów bathroom & tiling cover" loading="lazy">
+              </div>
+              <div class="card-body">
+                <h3 class="h5 mb-1">Mokotów — Bathroom & Tiling</h3>
+                <p class="text-secondary mb-3">New waterproofing, tiling, and fixtures with clean, durable lines.</p>
+                <a href="#"
+                   class="stretched-link open-project"
+                   data-title="Mokotów — Bathroom & Tiling"
+                   data-summary="New waterproofing, tiling, and fixtures with clean, durable lines."
+                   data-details="Substrate prep, decoupling where needed, and waterproofing around wet areas. Final grout is stain-resistant for easier maintenance."
+                   data-images="/public/images/projects/proj4/1.jpg,/public/images/projects/proj4/2.jpg,/public/images/projects/proj4/3.jpg"
+                   aria-label="Open project: Mokotów — Bathroom & Tiling"
+                   data-bs-toggle="modal" data-bs-target="#projectModal"></a>
+              </div>
+            </article>
+          </div>
+
+      </div>
+
+      <!-- Dynamic Modal (one for all cards) -->
+      <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-75">
+          <div class="modal-content rounded-4 overflow-hidden">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="pmTitle">Project</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body modal-split">
+              <!-- Left: dynamic carousel -->
+              <div class="modal-left">
+                <div id="pmCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-indicators" id="pmIndicators"></div>
+                  <div class="carousel-inner rounded-3 overflow-hidden h-100" id="pmInner"></div>
+
+                  <button class="carousel-control-prev" type="button" data-bs-target="#pmCarousel" data-bs-slide="prev" aria-label="Prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#pmCarousel" data-bs-slide="next" aria-label="Next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right: dynamic details -->
+              <div class="modal-right">
+                <h6 class="fw-bold mb-2">Quick summary</h6>
+                <p class="text-secondary" id="pmSummary"></p>
+                <hr>
+                <h6 class="fw-bold mb-2">Detailed explanation</h6>
+                <p id="pmDetails"></p>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-top py-4 bg-white">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <small class="text-secondary mb-0">© <span id="y"></span> Smyrna — Home Restoration</small>
+      <div class="d-flex align-items-center gap-4">
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Facebook:</span>
+          <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <i class="bi bi-facebook fs-4"></i>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Instagram:</span>
+          <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <i class="bi bi-instagram fs-4"></i>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-secondary">Phone:</span>
+          <a href="tel:+48123456789" aria-label="Phone" class="social-link">
+            <i class="bi bi-telephone fs-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Dynamic modal script -->
+  <script>
+    document.addEventListener('click', function(e){
+      const a = e.target.closest('.open-project');
+      if(!a) return;
+
+      // Read data
+      const title   = a.dataset.title || 'Project';
+      const summary = a.dataset.summary || '';
+      const details = a.dataset.details || '';
+      const images  = (a.dataset.images || '').split(',').map(s=>s.trim()).filter(Boolean);
+
+      // Populate text
+      document.getElementById('pmTitle').textContent   = title;
+      document.getElementById('pmSummary').textContent = summary;
+      document.getElementById('pmDetails').textContent = details;
+
+      // Build carousel
+      const inner = document.getElementById('pmInner');
+      const indicators = document.getElementById('pmIndicators');
+      inner.innerHTML = '';
+      indicators.innerHTML = '';
+
+      images.forEach((src, i) => {
+        const isActive = i === 0 ? 'active' : '';
+
+        // indicator
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.setAttribute('data-bs-target', '#pmCarousel');
+        btn.setAttribute('data-bs-slide-to', String(i));
+        btn.setAttribute('aria-label', 'Slide ' + (i+1));
+        if (isActive) { btn.className = 'active'; btn.setAttribute('aria-current','true'); }
+        indicators.appendChild(btn);
+
+        // slide
+        const item = document.createElement('div');
+        item.className = 'carousel-item ' + isActive;
+        item.setAttribute('data-bs-interval','4000');
+        item.innerHTML = '<img src="'+src+'" class="d-block w-100 h-100 modal-img" alt="'+title+' image '+(i+1)+'">';
+        inner.appendChild(item);
+      });
+
+      // Reset carousel to first slide on open
+      const carouselEl = document.getElementById('pmCarousel');
+      const carousel = bootstrap.Carousel.getInstance(carouselEl) || new bootstrap.Carousel(carouselEl);
+      carousel.to(0);
+    }, false);
+  </script>
+</body>
+</html>
